@@ -3,6 +3,7 @@ import org.gradle.api.JavaVersion
 object Modules {
     const val logging = ":logging"
     const val data = ":data"
+    const val domain = ":domain"
 }
 
 object Config {

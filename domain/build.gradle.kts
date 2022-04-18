@@ -11,9 +11,10 @@ android {
     defaultConfig {
         minSdk = 22
         targetSdk = 32
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-        }
+    }
 
     buildTypes {
         release {
@@ -36,36 +37,24 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
-    // Retrofit
-    implementation(Retrofit.main)
-    implementation(Retrofit.converterGSON)
-    implementation(Retrofit.coroutinesAdapter)
-
-    // OkHTTP
-    implementation(OkHttp.main)
-    implementation(OkHttp.logging_interceptor)
-
     // Coroutines
     implementation(Coroutines.core)
     implementation(Coroutines.android)
 
     //Dagger - Hilt
     implementation(Hilt.android)
+    implementation(project(mapOf("path" to ":data")))
     kapt(Hilt.android_compiler)
 
-    //Room
-    implementation(Room.runtime)
-    implementation(Room.ktx)
-    implementation(Room.roomCommon)
-    kapt(Room.compiler)
+    //LiveData
+    implementation(Lifecycle.lifeCycleLiveData)
 
     implementation(AndroidX.ktx_core)
     implementation(AndroidX.appCompat)
-    implementation(Google.material)
     //Test
     testImplementation (Test.junit)
     androidTestImplementation (Test.junit_ext)
     androidTestImplementation (Espresso.core)
 
-//    implementation(project(":domain"))
+    implementation(project(":data"))
 }
