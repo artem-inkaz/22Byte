@@ -5,6 +5,7 @@ import ui.smartpro.data.model.NewsArticle
 import ui.smartpro.data.model.NewsResponse
 import ui.smartpro.data.repository.NewsRepo
 import ui.smartpro.domain.state.NetworkState
+import ui.smartpro.logging.Logger
 import javax.inject.Inject
 
 class NewsRepositoryImpl @Inject constructor(
@@ -40,9 +41,11 @@ class NewsRepositoryImpl @Inject constructor(
                 NetworkState.Success(result)
             } else {
                 NetworkState.Error("An error occurred")
+//                Logger.e("An error occurred")
             }
         } catch (e: Exception) {
             NetworkState.Error("Error occurred ${e.localizedMessage}")
+//            Logger.e("Error occurred ${e.localizedMessage}")
         }
     }
 
