@@ -1,7 +1,7 @@
-//apply from: "$project.rootDir/scripts/android-library-build.gradle"
+//apply {from("${project.rootDir}/scripts/android-library-build.gradle")}
 //
 //dependencies {
-//    "implementation"(Timber.timber)
+//    "implementation" (Timber.timber)
 //}
 
 plugins {

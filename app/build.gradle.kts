@@ -1,3 +1,7 @@
+import java.io.File
+import java.io.FileInputStream
+import java.util.*
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -8,7 +12,11 @@ plugins {
 //    id("androidx.navigation.safeargs.kotlin")
     id("androidx.navigation.safeargs")
 }
-
+val prop = Properties().apply {
+    if (rootProject.file("newsapi.properties").exists()) {
+        load(FileInputStream(File(rootProject.rootDir, "newsapi.properties")))
+    }
+}
 android {
     compileSdk = Config.COMPILE_SDK
     defaultConfig {
@@ -28,6 +36,12 @@ android {
                 )
             }
         }
+
+        buildConfigField(
+            "String",
+            "NEWS_API_KEY",
+            prop.getProperty("NEWS_API_KEY", "\"INVALID_API_KEY\"")
+        )
     }
 
 //    flavorDimensions.addAll(listOf("dev", "paid", "market"))
@@ -51,6 +65,7 @@ android {
         debug {
             isMinifyEnabled = false
             isDebuggable = true
+            buildConfigField ("String", "NEWS_API_KEY", prop.getProperty("NEWS_API_KEY", "\"INVALID_API_KEY\""))
         }
 //        getByName("debug") {}
         release {
@@ -61,6 +76,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField ("String", "NEWS_API_KEY", prop.toString())
         }
     }
     compileOptions {
