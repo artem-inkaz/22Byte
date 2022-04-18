@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "597683744782",
+    "project_id": "byte-3206d",
+    "storage_bucket": "byte-3206d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597683744782:android:778a5145904b0da1278c5f",
+        "android_client_info": {
+          "package_name": "ui.smartpro.a22byte"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597683744782-beeg918dfr41qt38vrlngau9d4o4l9ra.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ui.smartpro.a22byte",
+            "certificate_hash": "05aa3926bdaaac72617032f101e85cff1997bd6c"
+          }
+        },
+        {
+          "client_id": "597683744782-95m8kqov95nbt92s1ja267lpe64r96ec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBya1pj2SxaOrFhRvewkDtl5H27VAmmFPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597683744782-95m8kqov95nbt92s1ja267lpe64r96ec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

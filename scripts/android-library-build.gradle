@@ -1,0 +1,88 @@
+apply plugin: 'com.android.library'
+//apply plugin :'kotlin-android'
+apply plugin: "org.jetbrains.kotlin.android"
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdk Config.COMPILE_SDK
+
+    defaultConfig {
+        minSdk Config.MIN_SDK_VERSION
+        targetSdk Config.TARGET_SDK
+        multiDexEnabled true
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        consumerProguardFiles("consumer-rules.pro")
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        "room.schemaLocation"  : "$projectDir/schemas".toString(),
+                        "room.incremental"     : "true",
+                        "room.expandProjection": "true"
+                ]
+            }
+        }
+    }
+    flavorDimensions +=listOf("debug", "paid", "market")
+    productFlavors {
+        create("dev") {
+            dimension = "debug"
+            minSdk = 22
+        }
+        create("free") {
+            dimension = "market"
+            minSdk = 22
+        }
+        create("prod") {
+            dimension = "paid"
+            minSdk = 22
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
+            )
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions.freeCompilerArgs = ["-XXLanguage:+InlineClasses", "-Xskip-metadata-version-check"]
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+    implementation Legacy.legacy_support
+    implementation Legacy.legacy_support_core
+
+    implementation Kotlin.kotlinStdLib
+    implementation Coroutines.core
+    implementation Coroutines.android
+
+    implementation Hilt.android
+    kapt Hilt.android_compiler
+
+    testImplementation Test.junit
+    androidTestImplementation Test.junit_ext
+    androidTestImplementation Espresso.core
+}
