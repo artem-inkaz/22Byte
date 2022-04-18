@@ -2,6 +2,7 @@ import org.gradle.api.JavaVersion
 
 object Modules {
     const val logging = ":logging"
+    const val data = ":data"
 }
 
 object Config {
@@ -34,6 +35,7 @@ object LibVersion {
     const val coroutinesAdapter = "0.9.2"
     const val annotation = "1.1.0"
     const val roomVersion = "2.3.0-alpha04"
+    const val roomCommon = "2.4.2"
     const val roomPaging = "2.4.0-alpha04"
     const val hiltVersion = "2.41"
     const val glide = "4.11.0"
@@ -126,6 +128,8 @@ object Room {
     const val ktx = "androidx.room:room-ktx:${LibVersion.roomVersion}"
     const val testing = "androidx.room:room-testing:${LibVersion.roomVersion}"
     const val roomPaging = "androidx.room:room-paging:${LibVersion.roomPaging}"
+    const val roomCommon =
+        "androidx.room:room-common:${LibVersion.roomCommon}"
 }
 
 object Navigation {
@@ -135,6 +139,7 @@ object Navigation {
         "androidx.navigation:navigation-fragment-ktx:${LibVersion.navigationVersion}"
     const val navigationKtx =
         "androidx.navigation:navigation-ui-ktx:${LibVersion.navigationVersion}"
+
 }
 
 object Hilt {
