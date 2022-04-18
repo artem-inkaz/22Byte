@@ -18,3 +18,4 @@ rootProject.name = "22Byte"
 include ':app'
 include ':logging'
 include ':data'
+include ':domain'
