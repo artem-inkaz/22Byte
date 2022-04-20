@@ -11,7 +11,7 @@
 
         <TextView
             android:id="@+id/tvErrorMessage"
-            style="@style/tvErrorMessage_item_error"/>
+            style="@style/tvErrorMessage_item_error" />
 
         <Button
             android:id="@+id/btnRetry"

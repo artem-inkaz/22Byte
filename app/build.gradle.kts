@@ -9,7 +9,6 @@ plugins {
     id("dagger.hilt.android.plugin")
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
-//    id("androidx.navigation.safeargs.kotlin")
     id("androidx.navigation.safeargs")
 }
 val prop = Properties().apply {
@@ -20,10 +19,10 @@ val prop = Properties().apply {
 android {
     compileSdk = Config.COMPILE_SDK
     defaultConfig {
-    minSdk = Config.MIN_SDK_VERSION
-    targetSdk = Config.TARGET_SDK
-    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    signingConfig = signingConfigs.getByName("debug")
+        minSdk = Config.MIN_SDK_VERSION
+        targetSdk = Config.TARGET_SDK
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig = signingConfigs.getByName("debug")
         javaCompileOptions {
             annotationProcessorOptions {
                 // Refer https://developer.android.com/jetpack/androidx/releases/room#compiler-options
@@ -44,9 +43,7 @@ android {
         )
     }
 
-//    flavorDimensions.addAll(listOf("dev", "paid", "market"))
-//    flavorDimensions +="debug"
-    flavorDimensions +=listOf("debug", "paid", "market")
+    flavorDimensions += listOf("debug", "paid", "market")
     productFlavors {
         create("dev") {
             dimension = "debug"
@@ -65,9 +62,12 @@ android {
         debug {
             isMinifyEnabled = false
             isDebuggable = true
-            buildConfigField ("String", "NEWS_API_KEY", prop.getProperty("NEWS_API_KEY", "\"INVALID_API_KEY\""))
+            buildConfigField(
+                "String",
+                "NEWS_API_KEY",
+                prop.getProperty("NEWS_API_KEY", "\"INVALID_API_KEY\"")
+            )
         }
-//        getByName("debug") {}
         release {
             isMinifyEnabled = true
             isShrinkResources = false
@@ -76,7 +76,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            buildConfigField ("String", "NEWS_API_KEY", prop.toString())
+            buildConfigField("String", "NEWS_API_KEY", prop.toString())
         }
     }
     compileOptions {
@@ -169,14 +169,14 @@ dependencies {
     implementation(ViewBinding.viewbinding)
 
     //Firebase
-    implementation (Analytics.firebase)
-    implementation (Analytics.firebase_crashlytics_ktx)
-    implementation (Analytics.firebase_analytics_ktx)
+    implementation(Analytics.firebase)
+    implementation(Analytics.firebase_crashlytics_ktx)
+    implementation(Analytics.firebase_analytics_ktx)
 
     //Test
-    testImplementation (Test.junit)
-    androidTestImplementation (Test.junit_ext)
-    androidTestImplementation (Espresso.core)
+    testImplementation(Test.junit)
+    androidTestImplementation(Test.junit_ext)
+    androidTestImplementation(Espresso.core)
 
     implementation(project(":data"))
     implementation(project(":domain"))

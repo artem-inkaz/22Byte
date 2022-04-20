@@ -73,7 +73,7 @@ class MainViewModel @Inject constructor(
                                 NetworkState.Error(
                                     response.message ?: context.getString(R.string.error)
                                 )
-                            Logger.e(response.message?: context.getString(R.string.error))
+                            Logger.e(response.message ?: context.getString(R.string.error))
                         }
                         else -> {}
                     }
@@ -125,7 +125,7 @@ class MainViewModel @Inject constructor(
                         }
                         else -> {
                             if (response.data?.articles?.size == 0)
-                            Logger.d(context.getString(R.string.no_found_data))
+                                Logger.d(context.getString(R.string.no_found_data))
                         }
                     }
                 }
@@ -228,7 +228,7 @@ class MainViewModel @Inject constructor(
     private fun onError(throwable: Throwable) {
         throwable.message?.let {
             _errorMessage.value = it
-            Logger.e(it,throwable)
+            Logger.e(it, throwable)
         }
     }
 }

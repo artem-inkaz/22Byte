@@ -19,4 +19,6 @@
     <string name="error">Ошибка</string>
     <string name="internet_not_available">Упс, кажется отключен интернет, проверьте!</string>
     <string name="no_found_data">Упс, нет данных</string>
+    <string name="poster_image_article">Постер новости</string>
+    <string name="button_fab">Кнопка Избранные</string>
 </resources>

@@ -14,12 +14,14 @@
         <item name="searchViewStyle">@style/SearchStyle</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="SearchStyle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="editTextColor">#FFFFFF</item>
         <item name="android:tint">#FFFFFF</item>
         <item name="android:searchIcon">@drawable/ic_search</item>
         <item name="android:closeIcon">@drawable/ic_close</item>
     </style>
+
     <style name="ToolbarTheme" parent="ThemeOverlay.MaterialComponents.ActionBar">
         <item name="android:textColorPrimary">@android:color/white</item>
         <item name="android:textColorSecondary">#EEEEEE</item>

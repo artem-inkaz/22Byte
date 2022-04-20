@@ -6,7 +6,6 @@ buildscript {
 
     dependencies {
         classpath(Dep.gradle_plugin)
-//        classpath(Kotlin.gradle_plugin)
         classpath(Hilt.gradlePlugin)
         classpath(Navigation.safeArgs_gradle)
         classpath(Analytics.google_services)
@@ -18,7 +17,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-//        maven { url 'https://maven.fabric.io/public' }
     }
 }
 

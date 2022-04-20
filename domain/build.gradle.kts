@@ -61,9 +61,9 @@ dependencies {
     implementation(AndroidX.ktx_core)
     implementation(AndroidX.appCompat)
     //Test
-    testImplementation (Test.junit)
-    androidTestImplementation (Test.junit_ext)
-    androidTestImplementation (Espresso.core)
+    testImplementation(Test.junit)
+    androidTestImplementation(Test.junit_ext)
+    androidTestImplementation(Espresso.core)
 
     implementation(project(":data"))
     implementation(project(":logging"))

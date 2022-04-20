@@ -13,7 +13,6 @@ import ui.smartpro.a22byte.BuildConfig
 import ui.smartpro.data.api.NewsApi
 import ui.smartpro.data.repository.NewsRepo
 import ui.smartpro.data.repository.NewsRepoImpl
-import ui.smartpro.a22byte.utils.Constants
 import ui.smartpro.common.utils.Constants.Companion.BASE_URL
 import ui.smartpro.common.utils.Constants.Companion.searchTimeDelay
 import ui.smartpro.logging.Logger

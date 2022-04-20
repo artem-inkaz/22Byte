@@ -5,7 +5,7 @@ import ui.smartpro.data.api.NewsApi
 import ui.smartpro.data.model.NewsResponse
 import javax.inject.Inject
 
-class NewsRepoImpl@Inject constructor(private val newsApi: NewsApi) : NewsRepo {
+class NewsRepoImpl @Inject constructor(private val newsApi: NewsApi) : NewsRepo {
 
     override suspend fun searchNews(query: String, pageNumber: Int): Response<NewsResponse> =
         newsApi.searchNews(query, pageNumber)

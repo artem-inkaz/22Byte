@@ -16,7 +16,7 @@ import ui.smartpro.a22byte.ui.adapter.NewsAdapter
 
 class FavouriteFragment(
     override val layoutId: Int = R.layout.fragment_favourite
-): BaseFragment<FragmentFavouriteBinding>() {
+) : BaseFragment<FragmentFavouriteBinding>() {
 
     lateinit var viewModel: MainViewModel
     private lateinit var newsAdapter: NewsAdapter
@@ -67,7 +67,11 @@ class FavouriteFragment(
                 val position = viewHolder.bindingAdapterPosition
                 val article = newsAdapter.differ.currentList[position]
                 viewModel.deleteNews(article)
-                Snackbar.make(view, getString(R.string.favourite_delete_successful), Snackbar.LENGTH_LONG)
+                Snackbar.make(
+                    view,
+                    getString(R.string.favourite_delete_successful),
+                    Snackbar.LENGTH_LONG
+                )
                     .apply {
                         setAction(getString(R.string.undo)) {
                             viewModel.saveNews(article)
@@ -83,11 +87,10 @@ class FavouriteFragment(
     }
 
     private fun setupObserver() {
-//        doInScope {
+        doInScope {
             viewModel.getFavoriteNews().observe(viewLifecycleOwner) { news ->
                 newsAdapter.differ.submitList(news)
             }
-//        }
+        }
     }
-
 }

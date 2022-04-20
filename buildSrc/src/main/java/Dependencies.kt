@@ -52,7 +52,7 @@ object LibVersion {
     const val google_services = "4.3.10"
     const val firebase_crashlytics_ktx = "18.2.9"
     const val firebase_analytics_ktx = "20.1.2"
-
+    const val crashlytics = "2.10.1"
 }
 
 object Testing {
@@ -85,7 +85,7 @@ object Google {
     const val material = "com.google.android.material:material:${LibVersion.material}"
 }
 
-object Legacy{
+object Legacy {
     const val legacy_support = "androidx.legacy:legacy-support-v4:1.0.0"
     const val legacy_support_core = "androidx.legacy:legacy-support-core-utils:1.0.0"
 }
@@ -114,14 +114,15 @@ object AndroidX {
 }
 
 object Lifecycle {
-//    const val extensions = "androidx.lifecycle:lifecycle-extensions:${LibVersion.lifecycle}"
+    //    const val extensions = "androidx.lifecycle:lifecycle-extensions:${LibVersion.lifecycle}"
     const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${LibVersion.lifecycle}"
     const val compiler = "androidx.lifecycle:lifecycle-common-java8:${LibVersion.lifecycle}"
     const val lifeCycleLiveData =
         "androidx.lifecycle:lifecycle-livedata-ktx:${LibVersion.lifecycle}"
     const val lifeCycleRunTime =
         "androidx.lifecycle:lifecycle-runtime-ktx:${LibVersion.lifecycle}"
-    const val lifeCycleViewModelState ="androidx.lifecycle:lifecycle-viewmodel-savedstate:${LibVersion.lifecycle}"
+    const val lifeCycleViewModelState =
+        "androidx.lifecycle:lifecycle-viewmodel-savedstate:${LibVersion.lifecycle}"
 }
 
 object Room {
@@ -155,17 +156,23 @@ object Hilt {
     const val dagger = "com.google.dagger:dagger:${LibVersion.hiltVersion}"
     const val dagger_compiler = "com.google.dagger:dagger-compiler:${LibVersion.hiltVersion}"
     const val dagger_android = "com.google.dagger:dagger-android:${LibVersion.hiltVersion}"
-    const val dagger_android_support = "com.google.dagger:dagger-android-support:${LibVersion.hiltVersion}"
-    const val dagger_android_processor = "com.google.dagger:dagger-android-processor:${LibVersion.hiltVersion}"
+    const val dagger_android_support =
+        "com.google.dagger:dagger-android-support:${LibVersion.hiltVersion}"
+    const val dagger_android_processor =
+        "com.google.dagger:dagger-android-processor:${LibVersion.hiltVersion}"
 }
 
-object Analytics{
+object Analytics {
     const val google_services = "com.google.gms:google-services:${LibVersion.google_services}"
     const val gradle_firebase =
         "com.google.firebase:firebase-crashlytics-gradle:${LibVersion.firebase_crashlytics_gradle}"
     const val firebase = "com.google.firebase:firebase-bom:${LibVersion.firebase}"
-    const val firebase_crashlytics_ktx = "com.google.firebase:firebase-crashlytics-ktx:${LibVersion.firebase_crashlytics_ktx}"
-    const val firebase_analytics_ktx = "com.google.firebase:firebase-analytics-ktx:${LibVersion.firebase_analytics_ktx}"
+    const val firebase_crashlytics_ktx =
+        "com.google.firebase:firebase-crashlytics-ktx:${LibVersion.firebase_crashlytics_ktx}"
+    const val firebase_analytics_ktx =
+        "com.google.firebase:firebase-analytics-ktx:${LibVersion.firebase_analytics_ktx}"
+    const val crashlytics = "com.crashlytics.sdk.android:crashlytics:${LibVersion.crashlytics}"
+    const val fabric = "io.fabric.tools:gradle:${LibVersion.fabric}"
 }
 
 object Retrofit {
@@ -189,11 +196,11 @@ object Glide {
         "com.github.bumptech.glide:okhttp3-integration:${LibVersion.glide}"
 }
 
-object Coil{
+object Coil {
     const val coil = "io.coil-kt:coil:${LibVersion.coil}"
 }
 
-object Paging{
+object Paging {
     const val paging = "androidx.paging:paging-runtime-ktx:${LibVersion.pagingVersion}"
 }
 

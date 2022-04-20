@@ -18,7 +18,7 @@ data class NewsArticle(
     var publishedAt: String?,
     val source: Source?,
     val title: String?,
-    val url: String?= null,
+    val url: String? = null,
     val urlToImage: String? = null
 ) : Parcelable {
 

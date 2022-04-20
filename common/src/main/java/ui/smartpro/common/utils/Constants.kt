@@ -6,7 +6,6 @@ class Constants {
         const val BASE_URL = "https://newsapi.org"
         const val searchTimeDelay = 10000L
         const val QUERY_PER_PAGE = 20
-        const val DEFAULT_PAGE_INDEX = 1
         const val CountryCode = "ru"
     }
 }

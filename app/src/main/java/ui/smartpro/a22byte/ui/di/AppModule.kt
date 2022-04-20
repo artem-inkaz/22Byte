@@ -18,5 +18,4 @@ object AppModule {
     fun provideApplication(@ApplicationContext app: Context): App {
         return app as App
     }
-
 }

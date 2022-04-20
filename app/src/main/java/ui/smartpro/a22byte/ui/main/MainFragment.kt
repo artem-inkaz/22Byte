@@ -10,7 +10,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -27,7 +26,7 @@ import ui.smartpro.logging.Logger
 
 class MainFragment(
     override val layoutId: Int = R.layout.fragment_main
-): BaseFragment<FragmentMainBinding>() {
+) : BaseFragment<FragmentMainBinding>() {
 
     private lateinit var onScrollListener: EndlessRecyclerOnScrollListener
     lateinit var mainViewModel: MainViewModel
@@ -96,8 +95,7 @@ class MainFragment(
     }
 
     private fun setupObservers() {
-//        doInScope {
-        lifecycleScope.launchWhenStarted {
+        doInScope {
             if (!mainViewModel.searchEnable) {
                 mainViewModel.newsResponse.collect { response ->
                     when (response) {
@@ -130,10 +128,9 @@ class MainFragment(
             } else {
                 collectSearchResponse()
             }
-    }
+        }
 
-//        doInScope {
-        lifecycleScope.launchWhenStarted {
+        doInScope {
             mainViewModel.errorMessage.collect { value ->
                 if (value.isNotEmpty()) {
                     Toast.makeText(activity, value, Toast.LENGTH_LONG).show()
@@ -145,8 +142,7 @@ class MainFragment(
 
     private fun collectSearchResponse() {
         //Search response
-//        doInScope {
-        lifecycleScope.launchWhenStarted {
+        doInScope {
             if (mainViewModel.searchEnable) {
                 mainViewModel.searchNewsResponse.collect { response ->
                     when (response) {

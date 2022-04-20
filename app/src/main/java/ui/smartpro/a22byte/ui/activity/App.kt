@@ -10,7 +10,7 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Core.initAppCore(this)
+        Core.initAppCore()
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }

@@ -13,7 +13,7 @@ import ui.smartpro.common.base.BaseFragment
 
 class DetailFragment(
     override val layoutId: Int = R.layout.fragment_detail
-): BaseFragment<FragmentDetailBinding>() {
+) : BaseFragment<FragmentDetailBinding>() {
 
     lateinit var viewModel: MainViewModel
     val args: DetailFragmentArgs by navArgs()
@@ -38,16 +38,16 @@ class DetailFragment(
 
         binding.fab.setOnClickListener {
             viewModel.saveNews(news)
-            Snackbar.make(view, getString(R.string.saved_favorites_article), Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(view, getString(R.string.saved_favorites_article), Snackbar.LENGTH_SHORT)
+                .show()
         }
     }
 
     private fun setupObserver() {
-//        doInScope {
+        doInScope {
             viewModel.getFavoriteNews().observe(viewLifecycleOwner) { news ->
                 binding.fab.isGone = news.any { it.title == args.news.title }
             }
-//        }
+        }
     }
-
 }

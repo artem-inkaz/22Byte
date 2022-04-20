@@ -6,6 +6,6 @@ import kotlinx.parcelize.RawValue
 
 @Parcelize
 data class Source(
-    val id:@RawValue Any,
+    val id: @RawValue Any,
     val name: String
-): Parcelable
+) : Parcelable
