@@ -1,8 +1,11 @@
 package ui.smartpro.data.model
 
-import java.io.Serializable
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.RawValue
 
+@Parcelize
 data class Source(
-    val id: Any,
+    val id:@RawValue Any,
     val name: String
-) : Serializable
+): Parcelable

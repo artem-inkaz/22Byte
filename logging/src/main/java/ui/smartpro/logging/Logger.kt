@@ -15,7 +15,7 @@ object Logger {
 
     fun i(message: String, t: Throwable? = null) = logger.i(t, message)
 
-    fun e(t: Throwable? = null, message: String) = logger.e(t, message)
+    fun e(message: String,t: Throwable? = null ) = logger.e(t, message)
 
-    fun wtf(t: Throwable? = null, message: String) = logger.wtf(t, message)
+    fun wtf(message: String, t: Throwable? = null) = logger.wtf(t, message)
 }

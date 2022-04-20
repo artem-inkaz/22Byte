@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("dagger.hilt.android.plugin")
     id("kotlin-kapt")
+    id ("kotlin-parcelize")
 }
 
 android {
@@ -67,5 +68,5 @@ dependencies {
     androidTestImplementation (Test.junit_ext)
     androidTestImplementation (Espresso.core)
 
-//    implementation(project(":domain"))
+    implementation(project(":common"))
 }

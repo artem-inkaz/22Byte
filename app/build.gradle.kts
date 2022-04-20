@@ -149,20 +149,9 @@ dependencies {
     implementation(Hilt.android)
     kapt(Hilt.android_compiler)
 
-//    api(Hilt.dagger)
-//    api(Hilt.dagger_compiler)
-//
-//    api(Hilt.dagger_android)
-//    api(Hilt.dagger_android_support)
-//    api(Hilt.dagger_android_processor)
-
     //Navigation
     implementation(Navigation.navigationFragment)
     implementation(Navigation.navigationKtx)
-
-    // Glide
-    implementation(Glide.runtime)
-    kapt(Glide.compiler)
 
     //Coil
     implementation(Coil.coil)
@@ -188,4 +177,9 @@ dependencies {
     testImplementation (Test.junit)
     androidTestImplementation (Test.junit_ext)
     androidTestImplementation (Espresso.core)
+
+    implementation(project(":data"))
+    implementation(project(":domain"))
+    implementation(project(":logging"))
+    implementation(project(":common"))
 }
