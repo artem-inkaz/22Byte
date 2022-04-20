@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_bottom_navigation_view">56dp</dimen>
+    <dimen name="margin_end_fab">32dp</dimen>
+    <dimen name="margin_bottom_fab">32dp</dimen>
+    <dimen name="padding_bottom_recycler_main">50dp</dimen>
+    <dimen name="margin_include_item_error">16dp</dimen>
+    <dimen name="margin_tv_error_message">16dp</dimen>
+    <dimen name="margin_btn_retry">16dp</dimen>
+    <dimen name="text_size_btn_retry">10sp</dimen>
+    <dimen name="margin_start_tvtitle_items_news">8dp</dimen>
+    <dimen name="margin_end_tvtitle_items_news">6dp</dimen>
+    <dimen name="text_size_tvtitle_items_news">16sp</dimen>
+    <dimen name="text_size_tvdescription_item_news">14sp</dimen>
+    <dimen name="margin_start_tvdescription_item_news">8dp</dimen>
+    <dimen name="margin_top_tvdescription_item_news">8dp</dimen>
+    <dimen name="margin_end_tvdescription_item_news">8dp</dimen>
+    <dimen name="article_image_width">160dp</dimen>
+    <dimen name="article_image_height">100dp</dimen>
+    <dimen name="margin_article_image">10dp</dimen>
+</resources>

@@ -9,8 +9,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFavoriteNews"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        style="@style/recyclerView_favourite" />
 
 </FrameLayout>
 </layout>

@@ -15,11 +15,7 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:src="@drawable/ic_baseline_favorite_24"
+        style="@style/fab"
         app:tint="@android:color/holo_red_dark"
         app:backgroundTint="@color/background_fab"
         app:fabSize="normal"
