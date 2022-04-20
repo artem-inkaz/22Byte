@@ -37,13 +37,22 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
+    // Retrofit
+    implementation(Retrofit.main)
+    implementation(Retrofit.converterGSON)
+    implementation(Retrofit.coroutinesAdapter)
+
+    // OkHTTP
+    implementation(OkHttp.main)
+    implementation(OkHttp.logging_interceptor)
+
     // Coroutines
     implementation(Coroutines.core)
     implementation(Coroutines.android)
 
     //Dagger - Hilt
     implementation(Hilt.android)
-
+    implementation(project(mapOf("path" to ":data")))
     kapt(Hilt.android_compiler)
 
     //LiveData
@@ -52,9 +61,9 @@ dependencies {
     implementation(AndroidX.ktx_core)
     implementation(AndroidX.appCompat)
     //Test
-    testImplementation (Test.junit)
-    androidTestImplementation (Test.junit_ext)
-    androidTestImplementation (Espresso.core)
+    testImplementation(Test.junit)
+    androidTestImplementation(Test.junit_ext)
+    androidTestImplementation(Espresso.core)
 
     implementation(project(":data"))
     implementation(project(":logging"))

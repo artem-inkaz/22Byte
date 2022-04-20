@@ -24,6 +24,4 @@ abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
     protected open fun onViewReady(savedInstanceState: Bundle?) {
         // use this method in child activity
     }
-
-
 }

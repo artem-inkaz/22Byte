@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-//apply plugin :'kotlin-android'
 apply plugin: 'org.jetbrains.kotlin.android'
 apply plugin: 'kotlin-kapt'
 
@@ -24,7 +23,7 @@ android {
             }
         }
     }
-    flavorDimensions +=listOf("debug", "paid", "market")
+    flavorDimensions += listOf("debug", "paid", "market")
     productFlavors {
         create("dev") {
             dimension = "debug"

@@ -53,6 +53,9 @@ dependencies {
 
     implementation(Lifecycle.lifeCycleRunTime)
 
+    //Coil
+    implementation(Coil.coil)
+
     //Binding
     implementation(ViewBinding.viewbinding)
 

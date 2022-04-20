@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ui.smartpro.a22byte.ui.main.MainFragment"
+        tools:layout="@layout/fragment_main"
+        android:label="@string/today_news">
+        <action
+            android:id="@+id/action_mainFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="ui.smartpro.a22byte.ui.detail.DetailFragment"
+        tools:layout="@layout/fragment_detail"
+        android:label="@string/details">
+        <argument
+            android:name="news"
+            app:argType="ui.smartpro.data.model.NewsArticle" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="ui.smartpro.a22byte.ui.favourite.FavouriteFragment"
+        android:label="@string/favorite_news" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+</navigation>

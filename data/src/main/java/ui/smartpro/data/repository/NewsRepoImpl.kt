@@ -5,12 +5,12 @@ import ui.smartpro.data.api.NewsApi
 import ui.smartpro.data.model.NewsResponse
 import javax.inject.Inject
 
-class NewsRepoImpl@Inject constructor(private val newsApi: NewsApi) : NewsRepo {
+class NewsRepoImpl @Inject constructor(private val newsApi: NewsApi) : NewsRepo {
 
     override suspend fun searchNews(query: String, pageNumber: Int): Response<NewsResponse> =
-        newsApi.getNews(query, pageNumber)
+        newsApi.searchNews(query, pageNumber)
 
     override suspend fun getNews(countryCode: String, pageNumber: Int): Response<NewsResponse> =
-        newsApi.searchNews(countryCode, pageNumber)
+        newsApi.getNews(countryCode, pageNumber)
 
 }

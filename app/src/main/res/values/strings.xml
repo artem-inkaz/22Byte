@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">22Byte</string>
+    <string name="alert_description_download_image_movie">Изображение не найдено</string>
+    <string name="title">Заголовок</string>
+    <string name="description">Описание</string>
+    <string name="source">ресурс</string>
+    <string name="published_at">Публикация</string>
+    <string name="favorites">Интересные</string>
+    <string name="news">Новости</string>
+    <string name="search">Поиск</string>
+    <string name="something_went_wrong">Что-то пошло не так, какая то проблема</string>
+    <string name="today_news">Новости сегодня</string>
+    <string name="favorite_news">Интересные новости</string>
+    <string name="details">Подробности</string>
+    <string name="retry">Повторить попытку</string>
+    <string name="saved_favorites_article">Новость сохранена в Интересные!</string>
+    <string name="favourite_delete_successful">Новость успешно удалена из Интересных!</string>
+    <string name="undo">Отменить</string>
+    <string name="error">Ошибка</string>
+    <string name="internet_not_available">Упс, кажется отключен интернет, проверьте!</string>
+    <string name="no_found_data">Упс, нет данных</string>
+    <string name="poster_image_article">Постер новости</string>
+    <string name="button_fab">Кнопка Избранные</string>
 </resources>

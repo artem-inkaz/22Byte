@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("dagger.hilt.android.plugin")
     id("kotlin-kapt")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -13,7 +14,7 @@ android {
         targetSdk = 32
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-        }
+    }
 
     buildTypes {
         release {
@@ -63,9 +64,9 @@ dependencies {
     implementation(AndroidX.appCompat)
     implementation(Google.material)
     //Test
-    testImplementation (Test.junit)
-    androidTestImplementation (Test.junit_ext)
-    androidTestImplementation (Espresso.core)
+    testImplementation(Test.junit)
+    androidTestImplementation(Test.junit_ext)
+    androidTestImplementation(Espresso.core)
 
-//    implementation(project(":domain"))
+    implementation(project(":common"))
 }

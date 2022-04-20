@@ -1,12 +1,8 @@
-//apply {from("${project.rootDir}/scripts/android-library-build.gradle")}
-//
-//dependencies {
-//    "implementation" (Timber.timber)
-//}
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -19,7 +15,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
-    flavorDimensions +=listOf("debug", "paid", "market")
+    flavorDimensions += listOf("debug", "paid", "market")
     productFlavors {
         create("dev") {
             dimension = "debug"
@@ -57,4 +53,8 @@ android {
 
 dependencies {
     implementation(Timber.timber)
+    //Firebase
+    implementation(Analytics.firebase)
+    implementation(Analytics.firebase_crashlytics_ktx)
+    implementation(Analytics.firebase_analytics_ktx)
 }

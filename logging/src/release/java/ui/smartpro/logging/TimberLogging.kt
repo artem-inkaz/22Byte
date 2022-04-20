@@ -1,7 +1,6 @@
 package com.rcosteira.logging
 
 import android.util.Log
-//import com.crashlytics.android.Crashlytics
 import timber.log.Timber
 
 class TimberLogging : Timber.Tree() {
@@ -13,14 +12,14 @@ class TimberLogging : Timber.Tree() {
     }
 
     private fun logWarning(priority: Int, tag: String?, message: String) {
-        //Crashlytics.log(priority, tag, message)
+        FirebaseCrashlytics.getInstance().log(priority, tag, message)
     }
 
     private fun logError(t: Throwable?, priority: Int, tag: String?, message: String) {
-        //Crashlytics.log(priority, tag, message)
+        FirebaseCrashlytics.getInstance().log(priority, tag, message)
 
         t?.let {
-            //Crashlytics.logException(it)
+            FirebaseCrashlytics.getInstance().logException(it)
         }
     }
 }

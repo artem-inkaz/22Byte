@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:theme">@style/ToolbarTheme</item>
+        <item name="android:popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="bottomNavigationView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_bottom_navigation_view</item>
+    </style>
+
+    <style name="fab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/margin_end_fab</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom_fab</item>
+        <item name="android:src">@drawable/ic_baseline_favorite_24</item>
+        <item name="android:contentDescription">@string/button_fab</item>
+    </style>
+
+    <style name="recyclerView_favourite">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="swipeRefreshLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="recyclerView_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:paddingBottom">@dimen/padding_bottom_recycler_main</item>
+    </style>
+
+    <style name="itemErrorMessage_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin_include_item_error</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="progressBar_main">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="cardView_item_error">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="tvErrorMessage_item_error">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin_tv_error_message</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:text">@string/something_went_wrong</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="btnRetry_item_error">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin_btn_retry</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/text_size_btn_retry</item>
+        <item name="android:text">@string/retry</item>
+    </style>
+
+    <style name="tvTitle_items_news">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_start_tvtitle_items_news</item>
+        <item name="android:layout_marginEnd">@dimen/margin_end_tvtitle_items_news</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:text">@string/title</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_size_tvtitle_items_news</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tvDescription_items_news">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_start_tvdescription_item_news</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_tvdescription_item_news</item>
+        <item name="android:layout_marginEnd">@dimen/margin_end_tvdescription_item_news</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">6</item>
+        <item name="android:text">@string/description</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_size_tvdescription_item_news</item>
+    </style>
+
+    <style name="ivArticleImage_items_news">
+        <item name="android:layout_width">@dimen/article_image_width</item>
+        <item name="android:layout_height">@dimen/article_image_height</item>
+        <item name="android:layout_margin">@dimen/margin_article_image</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:contentDescription">@string/poster_image_article</item>
+    </style>
+
+    <style name="tvSource_items_news">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_start_tvdescription_item_news</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_tvdescription_item_news</item>
+        <item name="android:layout_marginEnd">@dimen/margin_end_tvdescription_item_news</item>
+        <item name="android:text">@string/source</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_size_tvdescription_item_news</item>
+    </style>
+
+    <style name="tvPublishedAt_items_news">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_start_tvdescription_item_news</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_tvdescription_item_news</item>
+        <item name="android:layout_marginEnd">@dimen/margin_end_tvdescription_item_news</item>
+        <item name="android:text">@string/published_at</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_size_tvdescription_item_news</item>
+    </style>
+
+</resources>

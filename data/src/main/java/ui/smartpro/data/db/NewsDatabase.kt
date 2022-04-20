@@ -9,7 +9,7 @@ import ui.smartpro.data.model.NewsArticle
 
 @Database(
     entities = [NewsArticle::class],
-    version = 1 ,
+    version = 1,
     exportSchema = false
 )
 @TypeConverters(Converters::class)

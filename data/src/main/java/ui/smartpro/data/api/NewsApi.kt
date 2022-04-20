@@ -3,10 +3,10 @@ package ui.smartpro.data.api
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
+import ui.smartpro.common.utils.Constants.Companion.API_KEY
+import ui.smartpro.common.utils.Constants.Companion.CountryCode
+import ui.smartpro.common.utils.Constants.Companion.QUERY_PER_PAGE
 import ui.smartpro.data.model.NewsResponse
-import ui.smartpro.data.utils.Constants.Companion.API_KEY
-import ui.smartpro.data.utils.Constants.Companion.CountryCode
-import ui.smartpro.data.utils.Constants.Companion.QUERY_PER_PAGE
 
 interface NewsApi {
 
